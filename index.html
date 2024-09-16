@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab arte</title>
+  <link rel="stylesheet" href="libs/fancybox/fancybox.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media (max-width: 768px) {
+      .info-2 {
+        background-image: url(images/decor/decor-1.svg) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg style="display: none;">
+    <symbol id="icons-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14">
+      <g>
+        <path
+          d="M11.5162 9.78862C12.3147 8.76423 12.7972 7.47968 12.7972 6.09756C12.7972 2.73171 10.0022 0 6.55822 0C3.11429 0 0.319214 2.73171 0.319214 6.09756C0.319214 9.46342 3.11429 12.1951 6.55822 12.1951C7.97239 12.1951 9.28674 11.7236 10.3349 10.9431L13.2132 13.7561C13.3795 13.9187 13.5958 14 13.7955 14C13.9951 14 14.228 13.9187 14.3778 13.7561C14.7105 13.4309 14.7105 12.9268 14.3778 12.6016L11.5162 9.78862ZM1.98295 6.09756C1.98295 3.62602 4.02934 1.62602 6.55822 1.62602C9.0871 1.62602 11.1335 3.62602 11.1335 6.09756C11.1335 8.56911 9.07046 10.5691 6.55822 10.5691C4.04598 10.5691 1.98295 8.55285 1.98295 6.09756Z" />
+      </g>
+    </symbol>
+    <symbol id="icons-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 17">
+      <g>
+        <path
+          d="M1 1L2.40906 3.09782C3.72043 5.0502 4.37612 6.02638 4.62704 7.08481C4.83957 7.98132 4.84279 8.91473 4.63643 9.81267C4.39281 10.8728 3.74387 11.8535 2.44598 13.8149L1 16"
+          stroke-miterlimit="11.4737" stroke-linecap="round" />
+      </g>
+    </symbol>
+    <symbol id="icons-loupe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+      <g>
+        <path
+          d="M23.4767 20.9756C25.1512 18.7805 26.1628 16.0279 26.1628 13.0662C26.1628 5.85366 20.3023 0 13.0814 0C5.86046 0 0 5.85366 0 13.0662C0 20.2787 5.86046 26.1324 13.0814 26.1324C16.0465 26.1324 18.8023 25.122 21 23.4495L27.0349 29.4774C27.3837 29.8258 27.8372 30 28.2558 30C28.6744 30 29.1628 29.8258 29.4767 29.4774C30.1744 28.7805 30.1744 27.7003 29.4767 27.0035L23.4767 20.9756ZM3.48837 13.0662C3.48837 7.77004 7.77907 3.48432 13.0814 3.48432C18.3837 3.48432 22.6744 7.77004 22.6744 13.0662C22.6744 18.3624 18.3488 22.6481 13.0814 22.6481C7.81395 22.6481 3.48837 18.3275 3.48837 13.0662Z"
+          fill="#FDFFF9" />
+        <path d="M13.0165 8.18164V17.7271" stroke="white" stroke-width="3" stroke-linecap="round" />
+        <path d="M8.18176 13.0162H17.8512" stroke="white" stroke-width="3" stroke-linecap="round" />
+      </g>
+    </symbol>
+    <symbol id="icons-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 61">
+      <g>
+        <path d="M2 27.2666L26.0856 2.99994L50.5333 27.2666" stroke-width="3" stroke-linecap="round" />
+        <path d="M26.2666 3L26.2666 59" stroke-width="3" stroke-linecap="round" />
+      </g>
+    </symbol>
+    <symbol id="icons-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 19">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.6361 8.63645C15.4245 7.86938 16.6221 9.0346 15.8337 9.80167L11.5831 13.937C11.2593 14.2397 10.7357 14.2431 10.4011 13.9221L6.16627 9.80192C5.37787 9.03485 6.57549 7.86964 7.3639 8.63671L10.1531 11.3504V0.813729C10.1531 -0.271243 11.8469 -0.271243 11.8469 0.813729V11.3502L14.6361 8.63645ZM21.1636 16.4697C22.2788 16.4697 22.2788 18.1176 21.1636 18.1176H0.836364C-0.278788 18.1176 -0.278788 16.4697 0.836364 16.4697H21.1636Z" />
+      </g>
+    </symbol>
+    <symbol id="icons-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 12">
+      <g>
+        <path d="M17.6767 1.3388L9.33789 9.6776L0.999089 1.3388" stroke="#0033A0" stroke-width="2"
+          stroke-linecap="round" />
+      </g>
+    </symbol>
+  </svg>
+  <div class="wrapper" id="wrapper">
+    <div class="burger">
+      <div class="burger__menu">
+        <nav class="nav">
+          <div class="search">
+            <button class="search__btn">
+              <span>поиск</span>
+              <svg class="icons-search">
+                <use xlink:href="#icons-search"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#!">где купить</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">О нас</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Проекты</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Сервис</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">Документация</a></li>
+            <li class="nav__item"><a class="nav__link" href="#!">стать партнером</a></li>
+          </ul>
+        </nav>
+        <div class="catalog__accardion">
+          <div class="catalog__accardion-head">
+            <span>Каталог</span>
+            <svg class="icons-arrow">
+              <use xlink:href="#icons-arrow"></use>
+            </svg>
+          </div>
+          <div class="catalog__accardion-content">
+            <div class="catalog__items">
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                <span>ТЕХНОМАССИВ</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-2.png" alt="catalog">
+                <span>ИНЖЕНЕРНАЯ ДОСКА</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                <span>ПАРКЕТ НАЯ ДОСКА</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                <span>СОПУТСТВУЮЩИЕ ТОВАРЫ</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-3.png" alt="catalog"
+                  style="background-color: #fff;">
+                <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-4.png" alt="catalog"
+                  style="background-color: #fff;">
+                <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+              </a>
+              <a class="catalog__item" href="#!">
+                <img class="catalog__item-img" src="images/catalog/catalog-5.png" alt="catalog"
+                  style="background-color: #fff; border-radius: 50%;">
+                <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search__box">
+      <form class="search__form">
+        <input class="search__input" type="text" placeholder="Введите  запрос">
+        <button class="search__form-btn">
+          <svg class="icons-search">
+            <use xlink:href="#icons-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="/">
+            <img class="logo__img " src="images/logo/logo-black.svg" alt="logo">
+          </a>
+          <nav class="nav">
+            <div class="search">
+              <button class="search__btn">
+                <span>поиск</span>
+                <svg class="icons-search">
+                  <use xlink:href="#icons-search"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#!">где купить</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">О нас</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">Проекты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">Сервис</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">Документация</a></li>
+              <li class="nav__item"><a class="nav__link" href="#!">стать партнером</a></li>
+            </ul>
+          </nav>
+          <div class="catalog">
+            <button class="catalog__btn">
+              Каталог
+            </button>
+            <div class="catalog__menu">
+              <div class="catalog__content">
+                <picture>
+                  <source type="image/avif" srcset="images/intro.avif">
+                  <source type="image/webp" srcset="images/intro.webp">
+                  <img class="catalog__img" src="images/intro.jpg" alt="news">
+                </picture>
+                <div class="catalog__items">
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                    <span>ТЕХНОМАССИВ</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-2.png" alt="catalog">
+                    <span>ИНЖЕНЕРНАЯ ДОСКА</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                    <span>ПАРКЕТ НАЯ ДОСКА</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-1.png" alt="catalog">
+                    <span>СОПУТСТВУЮЩИЕ ТОВАРЫ</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-3.png" alt="catalog">
+                    <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-4.png" alt="catalog">
+                    <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+                  </a>
+                  <a class="catalog__item" href="#!">
+                    <img class="catalog__item-img" src="images/catalog/catalog-5.png" alt="catalog">
+                    <span>МОДУЛЬНЫЙ ПАРКЕТ</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="burger__btn">
+            <span class="burger__btn-line"></span>
+            <span class="burger__btn-line"></span>
+            <span class="burger__btn-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+<main class="main">
+  <section class="intro" style="background-image: url(images/decor/decor-1.svg);">
+    <div class="container">
+      <div class="intro__inner">
+        <div class="intro__info">
+          <h1 class="intro__title">Исключительно натуральные полы</h1>
+        </div>
+        <div class="intro__content">
+          <div class="intro__swiper-info">
+            <span>Отель Националь</span>
+          </div>
+          <div class="intro__swiper-wrapper">
+            <div class="swiper intro__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="intro__swiper-slide">
+                    <picture>
+                      <source type="image/avif" srcset="images/intro.avif">
+                      <source type="image/webp" srcset="images/intro.webp">
+                      <img class="intro__img" src="images/intro.jpg" alt="news">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="intro__swiper-slide">
+                    <picture>
+                      <source type="image/avif" srcset="images/intro.avif">
+                      <source type="image/webp" srcset="images/intro.webp">
+                      <img class="intro__img" src="images/intro.jpg" alt="news">
+                    </picture>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="intro__swiper-slide">
+                    <picture>
+                      <source type="image/avif" srcset="images/intro.avif">
+                      <source type="image/webp" srcset="images/intro.webp">
+                      <img class="intro__img" src="images/intro.jpg" alt="news">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div class="intro__swiper-controls">
+                <div class="swiper-button-prev swiper-arrow swiper-arrow-prev">
+                  <svg class="icons-arrow">
+                    <use xlink:href="#icons-arrow"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next swiper-arrow swiper-arrow-next">
+                  <svg class="icons-arrow">
+                    <use xlink:href="#icons-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination intro-swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="info-1">
+    <div class="container">
+      <div class="info-1__inner">
+        <div class="info-1__content" style="background-image: url(images/info-1.jpg);">
+          <h2 class="title"><span class="block"></span>LAB ARTE — надежная и выразительная основа интерьера</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section info-2" style="background-image: url(images/decor/decor-2.svg);">
+    <div class="container">
+      <div class="info-2__inner">
+        <div class="info-2__content">
+          <span class="title">Мы содействуем в формировании комфортных<br>пространств, предложением высококачественных
+            <br><span class="block-1"></span>натуральных полов, внимательно
+            учитывая <br><span class="block-2"></span>потребности каждого клиента и обеспечивая сочетание красоты и
+            функциональности в наших изделиях.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="info-3">
+    <div class="container">
+      <div class="info-3__inner">
+        <div class="info-3__content">
+          <div class="info-3__item">
+            <h3 class="title">надежность</h3>
+            <div class="info-3__text">
+              <p>
+                Натуральные полы являются символом надежности и прочности, воплощая в себе естественную эстетику и
+                универсальность,
+                которая выдерживает испытание временем.
+              </p>
+            </div>
+          </div>
+          <div class="info-3__item info-3__item--2" style="background-image: url(images/cat.jpg);">
+            <h3 class="title">забота</h3>
+            <div class="info-3__text">
+              <p>
+
+              </p>
+            </div>
+          </div>
+          <div class="info-3__item">
+            <h3 class="title">эстетика</h3>
+            <div class="info-3__text">
+              <p>
+                Натуральные полы воплощают <br>в себе неповторимую красоту окружающего мира и выразительность естественной текстуры,
+                создавая образ, который напоминает о величии природы.
+              </p>
+            </div>
+          </div>
+          <div class="info-3__item">
+            <span class="title"></span>
+            <div class="info-3__text">
+              <p>
+                Мы знаем о напольных покрытиях все - вот уже двадцать лет <br>мы занимаемся
+                их реализацией <br>и производством.
+              </p>
+              <p>
+                Мы внимательны к безопасности, надежности и эстетике продукта, потому что знаем, что дома мы проводим много времени с
+                самыми близкими и это время должно быть счастливым.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section info-4" style="background-image: url(images/decor/decor-3.svg);">
+    <div class="container">
+      <div class="info-4__inner">
+        <div class="info-4__content">
+          <p>
+            Насыщенность цвета натуральных полов неуклонно напоминает о красоте и разнообразии природы. Светлые тона придают
+            пространству свет и тепло, погружая в атмосферу уюта и радости. Тёмные оттенки подчёркивают стойкость<br>
+            и устойчивость, придают покой и могущество. Серые тона создают атмосферу уравновешенности и спокойствия. Натуральные
+            оттенки неповторимы и обладают чистотой, подчёркивая красоту простоты и естественности.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="variety">
+    <div class="container">
+      <div class="variety__inner">
+        <div class="variety__tab-btns">
+          <button class="btn variety__tab-btn tab-btn" data-tab="#variety-1">СВЕТЛЫЙ</button>
+          <button class="btn variety__tab-btn tab-btn" data-tab="#variety-2">ТЕМНЫЙ</button>
+          <button class="btn variety__tab-btn tab-btn" data-tab="#variety-3">НАТУРАЛЬНЫЙ</button>
+          <button class="btn variety__tab-btn tab-btn tab-active" data-tab="#variety-4">СЕРЫЙ</button>
+        </div>
+        <div class="variety__tab-items">
+          <div class="variety__tab-item tab-item" id="variety-1">
+            <div class="variety__gallery">
+              <div class="variety__gallery-items">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+              </div>
+              <a class="btn" href="#!">Показать еще</a>
+            </div>
+            <div class="variety__info">
+              <div class="variety__info-box">
+                <div class="variety__info-text">
+                  <h4 class="variety__info-title">Инженерная доска<br> Дуб Исландия</h4>
+                  <span class="variety__info-subtitle">КОД САЙТА: SKARA PRO | L1251-04297</span>
+                  <table class="variety__info-table">
+                    <tr>
+                      <td>Тон</td>
+                      <td>Натуральный</td>
+                    </tr>
+                    <tr>
+                      <td>Порода дерева</td>
+                      <td>Дуб</td>
+                    </tr>
+                    <tr>
+                      <td>Фаска</td>
+                      <td>1-х сторонняя</td>
+                    </tr>
+                    <tr>
+                      <td>Покрытие</td>
+                      <td>Матовый лак</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="variety__info-btns">
+                  <a class="variety__info-btn" href="#!">ПОДРОБНЕЕ</a>
+                  <a class="variety__info-btn" href="#!">ГДЕ КУПИТЬ</a>
+                </div>
+              </div>
+              <div class="variety__info-images">
+                <a class="variety__gallery-link" href="images/variety-2.jpg" data-fancybox>
+                  <img class="variety__info-img" src="images/variety-2.jpg" alt="variety">
+                </a>
+                <button class="variety__info-loupe">
+                  <svg class="icons-loupe">
+                    <use xlink:href="#icons-loupe"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="variety__tab-item tab-item" id="variety-2">
+            <div class="variety__gallery">
+              <div class="variety__gallery-items">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+              </div>
+              <a class="btn" href="#!">Показать еще</a>
+            </div>
+            <div class="variety__info">
+              <div class="variety__info-box">
+                <div class="variety__info-text">
+                  <h4 class="variety__info-title">Инженерная доска<br> Дуб Исландия</h4>
+                  <span class="variety__info-subtitle">КОД САЙТА: SKARA PRO | L1251-04297</span>
+                  <table class="variety__info-table">
+                    <tr>
+                      <td>Тон</td>
+                      <td>Натуральный</td>
+                    </tr>
+                    <tr>
+                      <td>Порода дерева</td>
+                      <td>Дуб</td>
+                    </tr>
+                    <tr>
+                      <td>Фаска</td>
+                      <td>2-х сторонняя</td>
+                    </tr>
+                    <tr>
+                      <td>Покрытие</td>
+                      <td>Матовый лак</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="variety__info-btns">
+                  <a class="variety__info-btn" href="#!">ПОДРОБНЕЕ</a>
+                  <a class="variety__info-btn" href="#!">ГДЕ КУПИТЬ</a>
+                </div>
+              </div>
+              <div class="variety__info-images">
+                <a class="variety__gallery-link" href="images/variety-2.jpg" data-fancybox>
+                  <img class="variety__info-img" src="images/variety-2.jpg" alt="variety">
+                </a>
+                <button class="variety__info-loupe">
+                  <svg class="icons-loupe">
+                    <use xlink:href="#icons-loupe"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="variety__tab-item tab-item" id="variety-3">
+            <div class="variety__gallery">
+              <div class="variety__gallery-items">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+              </div>
+              <a class="btn" href="#!">Показать еще</a>
+            </div>
+            <div class="variety__info">
+              <div class="variety__info-box">
+                <div class="variety__info-text">
+                  <h4 class="variety__info-title">Инженерная доска<br> Дуб Исландия</h4>
+                  <span class="variety__info-subtitle">КОД САЙТА: SKARA PRO | L1251-04297</span>
+                  <table class="variety__info-table">
+                    <tr>
+                      <td>Тон</td>
+                      <td>Натуральный</td>
+                    </tr>
+                    <tr>
+                      <td>Порода дерева</td>
+                      <td>Дуб</td>
+                    </tr>
+                    <tr>
+                      <td>Фаска</td>
+                      <td>3-х сторонняя</td>
+                    </tr>
+                    <tr>
+                      <td>Покрытие</td>
+                      <td>Матовый лак</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="variety__info-btns">
+                  <a class="variety__info-btn" href="#!">ПОДРОБНЕЕ</a>
+                  <a class="variety__info-btn" href="#!">ГДЕ КУПИТЬ</a>
+                </div>
+              </div>
+              <div class="variety__info-images">
+                <a class="variety__gallery-link" href="images/variety-2.jpg" data-fancybox>
+                  <img class="variety__info-img" src="images/variety-2.jpg" alt="variety">
+                </a>
+                <button class="variety__info-loupe">
+                  <svg class="icons-loupe">
+                    <use xlink:href="#icons-loupe"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="variety__tab-item tab-item tab-active" id="variety-4">
+            <div class="variety__gallery">
+              <div class="variety__gallery-items">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+                <img class="variety__gallery-img" src="images/variety-1.jpg" alt="variety">
+              </div>
+              <a class="btn" href="#!">Показать еще</a>
+            </div>
+            <div class="variety__info">
+              <div class="variety__info-box">
+                <div class="variety__info-text">
+                  <h4 class="variety__info-title">Инженерная доска<br> Дуб Исландия</h4>
+                  <span class="variety__info-subtitle">КОД САЙТА: SKARA PRO | L1251-04297</span>
+                  <table class="variety__info-table">
+                    <tr>
+                      <td>Тон</td>
+                      <td>Натуральный</td>
+                    </tr>
+                    <tr>
+                      <td>Порода дерева</td>
+                      <td>Дуб</td>
+                    </tr>
+                    <tr>
+                      <td>Фаска</td>
+                      <td>4-х сторонняя</td>
+                    </tr>
+                    <tr>
+                      <td>Покрытие</td>
+                      <td>Матовый лак</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="variety__info-btns">
+                  <a class="variety__info-btn" href="#!">ПОДРОБНЕЕ</a>
+                  <a class="variety__info-btn" href="#!">ГДЕ КУПИТЬ</a>
+                </div>
+              </div>
+              <div class="variety__info-images">
+                <a class="variety__gallery-link" href="images/variety-2.jpg" data-fancybox>
+                  <img class="variety__info-img" src="images/variety-2.jpg" alt="variety">
+                </a>
+                <button class="variety__info-loupe">
+                  <svg class="icons-loupe">
+                    <use xlink:href="#icons-loupe"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="section info-btns" style="background-image: url(images/decor/decor-4.svg);">
+    <div class="container">
+      <div class="info-btns__inner">
+        <a class="btn" href="#!">УКЛАДКА</a>
+        <a class="btn" href="#!">УХОД</a>
+        <a class="btn" href="#!">РЕСТАВРАЦИЯ</a>
+      </div>
+    </div>
+  </div>
+  <section class="advantages">
+    <div class="container">
+      <div class="advantages__inner">
+        <div class="advantages__box-1">
+          <div class="advantages__box-content">
+            <p>
+              Мы гордимся тем, что Lab Arte – это 100% российское предприятие. Здесь трудятся лучшие отечественные кадры, а материалы,
+              полученные из сердца наших бескрайних лесов, сочетают в себе непревзойденность и экологичность. Мы обеспечиваем строгий
+              контроль качества на каждом этапе производства от выбора древесины до финальной отделки, что позволяет нам создавать
+              продукт мирового уровня.
+            </p>
+          </div>
+          <div class="advantages__box-2">
+            <div class="advantages__box-content">
+              <p>
+                Мы используем лучшие отечественные материалы и современные технологии для создания прочного и красивого напольного
+                покрытия. Гордимся нашим профессиональным коллективом и следим за экологичностью на всех этапах работы. Lab Arte – выбор
+                тех, <br>кто ценит настоящее качество <br>и российское мастерство.
+              </p>
+              <img class="advantages__logo-img" src="images/logo/logo-h.svg" alt="logo">
+            </div>
+            <div class="advantages__box-3" style="background-image: url(images/advantages.png);">
+              <h3 class="title">
+                Фабрика паркета Lab Arte –<br><span class="block"></span> это высококачественное производство в России.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__col">
+            <a class="logo" href="/">
+              <img class="logo__img " src="images/logo/logo-white.svg" alt="logo">
+            </a>
+            <div class="socials">
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <a class="socials__link" href="#!">
+                    <img class="socials__img" src="images/icons/youtube.svg" alt="youtube">
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#!">
+                    <img class="socials__img" src="images/icons/instagram.svg" alt="instagram">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__col">
+            <a class="footer__link" href="#!">КАТАЛОГ</a>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a class="footer__link" href="#!">СОВРЕМЕННЫЙ СТИЛЬ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">ЛОФТ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">ПРОВАНС</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">БЕЛЬГИЙСКИЙ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">АМЕРИКАНСКИЙ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">АР ДЕКО</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">МИНИМАЛИЗМ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">ЭТНОМОДЕРН</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <a class="footer__link" href="#!"> </a>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a class="footer__link" href="#!">техномассив</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">инженерная доска</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">массивная доска</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">паркет елочка</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">модульный паркет</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">художественный паркет</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">аксессуары</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">уходовые средства</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <a class="footer__link" href="#!"> </a>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a class="footer__link" href="#!">ИНФОРМАЦИЯ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">КОНТАКТЫ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">О КОМПАНИИ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">ДОСТАВКА И ОПЛАТА</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">ЗАКАЗ ОБРАЗЦОВ</a></li>
+              <li class="footer__list-item"><a class="footer__link" href="#!">СЕРТИФИКАТЫ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="btn-up" href="#wrapper">
+        <svg class="icons-up">
+          <use xlink:href="#icons-up"></use>
+        </svg>
+      </a>
+    </footer>
+  </div>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+  <script defer src="libs/fancybox/fancybox.umd.js"></script>
+  <script defer src="libs/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
